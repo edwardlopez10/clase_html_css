@@ -1,0 +1,2 @@
+<h2>Contenido cargado dinamicamente</h2>
+<p>Utilizando jQuery AJAX</p>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bienvenidos - Pagina de inicio</title>
+    <link rel="shorcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/estilo.css" />
+    <link href="css/all.css" rel="stylesheet">
+    <script defer src="js/all.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body class="bg">
+    <div class="container-fluid text-center mb-5 bartop">Bienvenidos al curso de Aplicaciones Web para el Ministerio de Defensa Nacional. <i class="fas fa-rocket"></i></div>
+    <div class="container text-center">
+        <div class="card card-mdn shadow-mdn p-5 mt-4">
+            <img src="img/mdn_logo.jpg" width="60px" height="60px">
+            <h2 class="mt-4">Consulta de datos</h2>
+            <small>Consulta de datos del Ministerio de Defensa Nacional de El Salvador.</small>
+            <form name="form-consulta">
+              <div class="mb-3 mt-4">
+              <label for="exampleFormControlInput1" class="form-label">DUI</label>
+              <input type="text" class="form-control" name="dui" id="dui" placeholder="00000000-0">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="validarFormulario()">Consultar</button>
+            <p id="msg" class="msg-css-class"></p>
+            <button type="button" class="btn btn-secondary" id="mayuda">Mostrar ayuda</button>
+            <button type="button" class="btn btn-secondary" id="oayuda" style="display: none;">Ocultar ayuda</button>
+            <button type="button" class="btn btn-secondary" id="accion">Accion</button>
+            <div id="divayuda" class="mt-4" style="display: none;">Debe ingresar un DUI valido de 10 digitos incluyendo el guion (-)</div>
+            <div id="contenido"></div>
+            </form>
+        </div>
+        <div class="card card-mdn shadow-mdn p-5 mt-4" id="resultado" hidden>
+          <div class="row">
+            <div class="col-2">Nombre: </div>
+            <div class="col-10"><p id="nombre"></p></div>
+          </div>
+          <div class="row">
+            <div class="col-2">Apellido: </div>
+            <div class="col-10"><p id="apellido"></p></div>
+          </div>
+          <div class="row">
+            <div class="col-2">Cantidad de armas: </div>
+            <div class="col-10"><p id="carmas"></p></div>
+          </div>
+        </div>
+    </div>
+    <script src="js/site.js"></script>
+  </body>
+</html>
